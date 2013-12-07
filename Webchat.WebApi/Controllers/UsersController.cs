@@ -13,6 +13,7 @@ using CloudinaryDotNet.Actions;
 
 namespace Webchat.WebApi.Controllers
 {
+    // CORS
     [EnableCors(origins: "http://webchat.vladislavdd.cloudvps.bg/", headers: "*", methods: "*")]
     public class UsersController : BaseController
     {
