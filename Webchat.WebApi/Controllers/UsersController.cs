@@ -13,7 +13,10 @@ using CloudinaryDotNet.Actions;
 
 namespace Webchat.WebApi.Controllers
 {
-    //[EnableCors(origins: "http://webchat.vladislavdd.cloudvps.bg", headers: "*", methods: "*")]
+    [EnableCors(
+        origins: "http://webchat.vladislavdd.cloudvps.bg",
+        headers: "Accept, Overwrite, Destination, Content-Type, Depth, User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control",
+        methods: "ACCEPT, PROPFIND, PROPPATCH, COPY, MOVE, DELETE, MKCOL, LOCK, UNLOCK, PUT, GETLIB, VERSION-CONTROL, CHECKIN, CHECKOUT, UNCHECKOUT, REPORT, UPDATE, CANCELUPLOAD, HEAD, OPTIONS, GET, POST")]
     [HttpHeader("Access-Control-Allow-Origin", "http://webchat.vladislavdd.cloudvps.bg")]
     [HttpHeader("Access-Control-Allow-Credentials", "true")]
     [HttpHeader("Access-Control-Allow-Methods", "ACCEPT, PROPFIND, PROPPATCH, COPY, MOVE, DELETE, MKCOL, LOCK, UNLOCK, PUT, GETLIB, VERSION-CONTROL, CHECKIN, CHECKOUT, UNCHECKOUT, REPORT, UPDATE, CANCELUPLOAD, HEAD, OPTIONS, GET, POST")]
