@@ -13,7 +13,7 @@ using CloudinaryDotNet.Actions;
 
 namespace Webchat.WebApi.Controllers
 {
-    [EnableCors(origins: "http://localhost:57351/", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : BaseController
     {
         private static Account m_account;
