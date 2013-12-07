@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Webchat.Data;
+using Webchat.WebApi.Helpers;
 
 namespace Webchat.WebApi
 {
@@ -26,6 +27,8 @@ namespace Webchat.WebApi
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<WebchatContext, Webchat.Data.Migrations.Configuration>());
+
+            GlobalConfiguration.Configuration.MessageHandlers.Add(new CorsHandler());
         }
     }
 }

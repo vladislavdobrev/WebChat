@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CorsHandler.cs" />
     <Compile Include="Models\FileModel.cs" />
     <Compile Include="Models\UserDetails.cs" />
     <Compile Include="Models\UserLoggedModel.cs" />
