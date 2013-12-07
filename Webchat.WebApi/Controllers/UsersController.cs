@@ -14,6 +14,11 @@ using CloudinaryDotNet.Actions;
 namespace Webchat.WebApi.Controllers
 {
     //[EnableCors(origins: "http://webchat.vladislavdd.cloudvps.bg", headers: "*", methods: "*")]
+    [HttpHeader("Access-Control-Allow-Origin", "http://webchat.vladislavdd.cloudvps.bg")]
+    [HttpHeader("Access-Control-Allow-Credentials", "true")]
+    [HttpHeader("Access-Control-Allow-Methods", "ACCEPT, PROPFIND, PROPPATCH, COPY, MOVE, DELETE, MKCOL, LOCK, UNLOCK, PUT, GETLIB, VERSION-CONTROL, CHECKIN, CHECKOUT, UNCHECKOUT, REPORT, UPDATE, CANCELUPLOAD, HEAD, OPTIONS, GET, POST")]
+    [HttpHeader("Access-Control-Allow-Headers", "Accept, Overwrite, Destination, Content-Type, Depth, User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control")]
+    [HttpHeader("Access-Control-Max-Age", "3600")]
     public class UsersController : BaseController
     {
         private static Account m_account;
@@ -38,6 +43,7 @@ namespace Webchat.WebApi.Controllers
         }
 
         [HttpPost]
+        [HttpOptions]
         [ActionName("register")]
         public HttpResponseMessage RegisterUser([FromBody]UserRegisterModel model)
         {
@@ -67,6 +73,7 @@ namespace Webchat.WebApi.Controllers
         }
 
         [HttpPost]
+        [HttpOptions]
         [ActionName("login")]
         public HttpResponseMessage LoginUser([FromBody]UserLoginModel model)
         {
@@ -93,6 +100,7 @@ namespace Webchat.WebApi.Controllers
         }
 
         [HttpGet]
+        [HttpOptions]
         [ActionName("logout")]
         public HttpResponseMessage LogoutUser(string sessionKey)
         {
@@ -106,6 +114,7 @@ namespace Webchat.WebApi.Controllers
         }
 
         [HttpPost]
+        [HttpOptions]
         [ActionName("add-contact")]
         public HttpResponseMessage AddContact(string sessionKey, [FromBody] string nickname)
         {
@@ -124,6 +133,7 @@ namespace Webchat.WebApi.Controllers
         }
 
         [HttpGet]
+        [HttpOptions]
         [ActionName("get-contacts")]
         public IQueryable<UserModel> GetContacts(string sessionKey)
         {
@@ -136,6 +146,7 @@ namespace Webchat.WebApi.Controllers
         }
 
         [HttpGet]
+        [HttpOptions]
         [ActionName("get")]
         public UserDetails Get(int id)
         {
@@ -148,6 +159,7 @@ namespace Webchat.WebApi.Controllers
             });
         }
 
+        [HttpOptions]
         private string UploadImageToCloudinary(string url)
         {
             m_account = new Account("haiubldgg", "235176581338859", "LqSoe-u4wR4g8dFSOQGT3YBrCbM");

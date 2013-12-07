@@ -141,6 +141,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CorsHandler.cs" />
+    <Compile Include="Helpers\HttpHeaderAttribute.cs" />
     <Compile Include="Models\FileModel.cs" />
     <Compile Include="Models\UserDetails.cs" />
     <Compile Include="Models\UserLoggedModel.cs" />
