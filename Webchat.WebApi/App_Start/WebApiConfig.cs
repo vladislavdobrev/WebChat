@@ -8,7 +8,7 @@ namespace Webchat.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            //config.EnableCors();
+            config.EnableCors();
 
             config.Routes.MapHttpRoute(
                    name: "UsersGetApi",

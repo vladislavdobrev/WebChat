@@ -28,7 +28,7 @@ namespace Webchat.WebApi
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<WebchatContext, Webchat.Data.Migrations.Configuration>());
 
-            GlobalConfiguration.Configuration.MessageHandlers.Add(new CorsHandler());
+            //GlobalConfiguration.Configuration.MessageHandlers.Add(new CorsHandler());
         }
     }
 }
