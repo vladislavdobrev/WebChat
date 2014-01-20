@@ -14,10 +14,10 @@ using CloudinaryDotNet.Actions;
 namespace Webchat.WebApi.Controllers
 {
     [EnableCors(
-        origins: "http://vdobrev.com/",
+        origins: "http://vdobrev.com",
         headers: "Accept, Overwrite, Destination, Content-Type, Depth, User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control",
         methods: "ACCEPT, PROPFIND, PROPPATCH, COPY, MOVE, DELETE, MKCOL, LOCK, UNLOCK, PUT, GETLIB, VERSION-CONTROL, CHECKIN, CHECKOUT, UNCHECKOUT, REPORT, UPDATE, CANCELUPLOAD, HEAD, OPTIONS, GET, POST")]
-    [HttpHeader("Access-Control-Allow-Origin", "http://vdobrev.com/webchat/")]
+    [HttpHeader("Access-Control-Allow-Origin", "http://vdobrev.com")]
     [HttpHeader("Access-Control-Allow-Credentials", "true")]
     [HttpHeader("Access-Control-Allow-Methods", "ACCEPT, PROPFIND, PROPPATCH, COPY, MOVE, DELETE, MKCOL, LOCK, UNLOCK, PUT, GETLIB, VERSION-CONTROL, CHECKIN, CHECKOUT, UNCHECKOUT, REPORT, UPDATE, CANCELUPLOAD, HEAD, OPTIONS, GET, POST")]
     [HttpHeader("Access-Control-Allow-Headers", "Accept, Overwrite, Destination, Content-Type, Depth, User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control")]
